@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Sana 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <div class="start-message">
+      <h1>Hey Sana 💌</h1>
+      <p>Tap to Begin This Surprise</p>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <!-- Overlay & container -->
+  <div class="overlay" id="main-overlay" style="display: none;"></div>
+  <div class="content" id="main-content" style="display: none;">
+    <h1 class="title">For You, Sana 💕</h1>
+
+    <!-- Typing effect -->
+    <div class="typewriter-wrapper">
+      <div id="typewriter" class="typewriter-text"></div>
+    </div>
+
+    <!-- Heart-framed slideshow -->
+   
+    <div class="slideshow-container">
+        <img class="slide" src="images/img1.png" alt="Slide 1">
+        <img class="slide" src="images/img2.png" alt="Slide 2">
+        <img class="slide" src="images/img3.png" alt="Slide 3">
+    </div>
+    
+
+    <!-- Audio controls -->
+    <div class="audio-controls">
+      <button id="playPauseBtn">Play Music</button>
+      
+    </div>
+
+    <p class="footer">— Made with ❤️ just for you</p>
+  </div>
+
+  <!-- Hidden audio element -->
+  <audio id="bg-music" loop>
+    <source src="audio/love-clip.mp3" type="audio/mpeg" />
+    Your browser does not support audio.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
