@@ -1,0 +1,170 @@
+/* === GENERAL RESET === */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dancing Script', cursive;
+  height: 100%;
+  background: url('images/background.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* === START SCREEN === */
+#start-screen {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.start-message h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.start-message p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#startBtn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #ff69b4;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#startBtn:hover {
+  background-color: #ffe6eb;
+}
+
+/* === OVERLAY === */
+
+/* === MAIN CONTENT === */
+.content {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 20px;
+  color: #fff8f8;
+}
+
+.typewriter-wrapper {
+  margin: 30px auto;
+  font-size: 1.5rem;
+  max-width: 600px;
+  color: #e42f2f;
+}
+
+/* === HEART FRAME FOR SLIDESHOW === */
+.heart-frame {
+  width: 320px;
+  height: 320px;
+  margin: 30px auto;
+  background: url('images/heart-frame.png') center center/contain no-repeat;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heart-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/heart-frame.png') center center/contain no-repeat;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.slideshow-container {
+  width: 250px;
+  height: 250px;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%; /* Optional: if you want a circular slideshow */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 50% ;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* === AUDIO CONTROLS === */
+.audio-controls {
+  margin-top: 20px;
+}
+
+#playPauseBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  color: #ff69b4;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#playPauseBtn:hover {
+  background: #ffe6eb;
+}
+
+.note {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #f9f9f9;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
